@@ -1,0 +1,6 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=924
+
+Useful for all people who edit Brazilian Portuguese websites in HTML or PHP with Vim.
+On loading a HTML or PHP file, this script replaces all the html-encoded (ccedil, atilde, etc) with their normal Ascii-Chars (ç,ã, etc) so they're more easily readable.
+
+When you save the file, all Ascii-Chars are replaced by the HTML Encoding.
