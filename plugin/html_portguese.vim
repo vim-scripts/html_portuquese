@@ -1,8 +1,8 @@
 " Vim html_portuguese plugin.
-" Version: 1.0
+" Version: 1.1
 " 
 " Description:
-" When loading a html or php file, this plugin replaces all
+" When loading a html file, this plugin replaces all
 " HTML-coded Portuquese  (like &ccedil;) with the 
 " normal representation (ç).
 "
@@ -25,6 +25,8 @@
 " Licence: GPL 
 " 
 " Changelog:
+" v1.1 29/02/2004]
+"  - fixed bug typo with acute string
 " v1.0 28/02/2004
 "  - initial release
 
@@ -61,39 +63,39 @@ function s:LeHtml()
    " letter 'a' 'A'
     %s/&atilde;/ã/eIg
     %s/&acirc;/â/eIg
-    %s/&acute;/á/eIg
+    %s/&aacute;/á/eIg
     %s/&agrave;/à/eIg
     %s/&Atilde;/Ã/eIg
     %s/&Acirc;/Â/eIg
-    %s/&Acute;/Á/eIg
+    %s/&Aacute;/Á/eIg
     %s/&Agrave;/À/eIg
     " letter 'e' 'E'
     %s/&ecirc;/ê/eIg
-    %s/&ecute;/é/eIg
+    %s/&eacute;/é/eIg
     %s/&egrave;/è/eIg
     %s/&Ecirc;/Ê/eIg
-    %s/&Ecute;/É/eIg
+    %s/&Eacute;/É/eIg
     %s/&Egrave;/È/eIg
     " letter 'i' 'I'
-    %s/&icute;/í/eIg
+    %s/&iacute;/í/eIg
     %s/&igrave;/ì/eIg
-    %s/&Icute;/Í/eIg
+    %s/&Iacute;/Í/eIg
     %s/&Igrave;/Ì/eIg
    " letter 'o' 'O' 
     %s/&otilde;/õ/eIg
     %s/&ocirc;/ô/eIg
-    %s/&ocute;/ó/eIg
+    %s/&oacute;/ó/eIg
     %s/&ograve;/ò/eIg
     %s/&Otilde;/Õ/eIg
     %s/&Ocirc;/Ô/eIg
-    %s/&Ocute;/Ó/eIg
+    %s/&Oacute;/Ó/eIg
     %s/&Ograve;/Ò/eIg
     " letter 'u' 'U'
     %s/&ucirc;/û/eIg
-    %s/&ucute;/ú/eIg
+    %s/&uacute;/ú/eIg
     %s/&ugrave;/ù/eIg
     %s/&Ucirc;/Û/eIg
-    %s/&Ucute;/Ú/eIg
+    %s/&Uacute;/Ú/eIg
     %s/&Ugrave;/Ù/eIg
     " latin capital letter C with cedilla,
     %s/&ccedil;/ç/eIg
@@ -113,39 +115,39 @@ function s:EscreveHtml()
    " letter 'a' 'A'
     %s/ã/\&atilde;/eIg
     %s/â/\&acirc;/eIg
-    %s/á/\&acute;/eIg
+    %s/á/\&aacute;/eIg
     %s/à/\&agrave;/eIg
     %s/Ã/\&Atilde;/eIg
     %s/Â/\&Acirc;/eIg
-    %s/Á/\&Acute;/eIg
+    %s/Á/\&Aacute;/eIg
     %s/À/\&Agrave;/eIg
     " letter 'e' 'E'
     %s/ê/\&ecirc;/eIg
-    %s/é/\&ecute;/eIg
+    %s/é/\&eacute;/eIg
     %s/è/\&egrave;/eIg
     %s/Ê/\&Ecirc;/eIg
-    %s/É/\&Ecute;/eIg
+    %s/É/\&Eacute;/eIg
     %s/È/\&Egrave;/eIg
     " letter 'i' 'I'
-    %s/í/\&icute;/eIg
+    %s/í/\&iacute;/eIg
     %s/ì/\&igrave;/eIg
-    %s/Í/\&Icute;/eIg
+    %s/Í/\&Iacute;/eIg
     %s/Ì/\&Igrave;/eIg
    " letter 'o' 'O' 
     %s/õ/\&otilde;/eIg
     %s/ô/\&ocirc;/eIg
-    %s/ó/\&ocute;/eIg
+    %s/ó/\&oacute;/eIg
     %s/ò/\&ograve;/eIg
     %s/Õ/\&Otilde;/eIg
     %s/Ô/\&Ocirc;/eIg
-    %s/Ó/\&Ocute;/eIg
+    %s/Ó/\&Oacute;/eIg
     %s/Ò/\&Ograve;/eIg
     " letter 'u' 'U'
     %s/û/\&ucirc;/eIg
-    %s/ú/\&ucute;/eIg
+    %s/ú/\&uacute;/eIg
     %s/ù/\&ugrave;/eIg
     %s/Û/\&Ucirc;/eIg
-    %s/Ú/\&Ucute;/eIg
+    %s/Ú/\&Uacute;/eIg
     %s/Ù/\&Ugrave;/eIg
     " latin capital letter C with cedilla,
     %s/ç/\&ccedil;/eIg
